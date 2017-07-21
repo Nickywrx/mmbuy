@@ -1,0 +1,102 @@
+.logo {
+  padding: 0;
+  margin: 0;
+}
+.overlay {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 999;
+  background-color: #fff;
+}
+.overlay img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 200px;
+  transform: translate(-50%, -50%);
+}
+.productList {
+  max-width: 640px;
+  min-width: 320px;
+  margin: 90px auto;
+  /*商品信息*/
+}
+.productList .crumb {
+  margin: 0 auto;
+  margin-top: 82px;
+  height: 36px;
+  line-height: 36px;
+  padding-left: 6px;
+  border-top: 1px solid #ebebeb;
+  background: linear-gradient(#fff, #ebebeb);
+}
+.productList .shop-info {
+  height: 115px;
+  border-bottom: 1px dashed #EBEBEB;
+}
+.productList .shop-info .pic {
+  float: left;
+  padding-top: 10px;
+  width: 100px;
+  height: 115px;
+}
+.productList .shop-info .pic img {
+  width: 100%;
+}
+.productList .shop-info .describe {
+  overflow: hidden;
+  height: 100%;
+  padding: 15px 8px 0 8px;
+}
+.productList .shop-info .describe .title {
+  height: 36px;
+  overflow: hidden;
+}
+.productList .shop-info .describe .option {
+  margin-top: 25px;
+}
+.productList .shop-info .describe .option .price {
+  margin-top: -10px;
+  margin-bottom: 5px;
+  color: red;
+  font-size: 16px;
+}
+.productList .shop-info .describe .option .price em {
+  font-size: 12px;
+  font-style: normal;
+}
+.productList .shop-info .describe .option .time {
+  font-size: 12px;
+  color: #A1A1A1;
+}
+.productList .shop-info .describe .option .time .small {
+  float: left;
+}
+.productList .shop-info .describe .option .time .commet {
+  float: right;
+}
+.productList .shop-info .describe .option .time .commet i {
+  display: inline-block;
+  width: 14px;
+  height: 11px;
+  background: url("../images/comment.png") no-repeat;
+  background-size: 12px 12px;
+}
+div.m-footer {
+  height: auto;
+}
+div.m-footer .changePage {
+  height: 30px;
+  background-color: #fff;
+}
+div.m-footer .changePage input {
+  text-align: center;
+}
+div.m-footer .changePage .pageCount {
+  height: 100%;
+  text-align: center;
+  padding-top: 8px;
+}

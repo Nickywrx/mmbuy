@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/public.css">
+    <link rel="stylesheet" href="./css/baicaijia.css">
+</head>
+
+<body>
+    <div class="overlay">
+        <img src="./images/loading12.gif" alt="">
+    </div>
+    <div class="m-header">
+        <!--慢慢买的头部，用来装内容-->
+        <div class="m-header-in">
+            <div class="back">
+                <a href="
+                index.html" class="backIcon">
+                    < </a>
+
+            </div>
+            <h2 class="bigTitle"></h2>
+
+            <a href="#" class="download"></a>
+        </div>
+    </div>
+
+    <div class="bcj-main">
+        <!--导航和搜索-->
+        <div class="bcj-nav">
+            <!--左边的可滑动导航-->
+            <div class="bcj-title">
+                <div class="ul-wapper clearfix">
+                    <ul class="tabs clearfix">
+                        <!--tabsTpl的坑-->
+
+                    </ul>
+                </div>
+            </div>
+            <!--搜索按钮-->
+            <div class="searchBtn">
+                <div class="searchIcon">
+
+                </div>
+            </div>
+            <!--搜索框-->
+            <div class="searchBox"></div>
+        </div>
+
+        <!--商品列表展示-->
+        <div class="bcj-list">
+
+            <ul class="bcj-list-ul">
+                <!--#listTpl模板的坑-->
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="m-footer">
+        <div class="m-footer-in">
+            <div class="m-footer-top clearfix">
+                <a href="javascript:;">登陆</a>
+                <a href="javascript:;">注册</a>
+                <a href="#"><img src="images/returnTop.png" alt="回到顶部" />返回顶部</a>
+
+            </div>
+            <div class="m-footer-bottom">
+                <p><strong>手机APP下载</strong> 慢慢买手机版 -- 掌上比价平台</p>
+                <p>m.manmanbuy.com</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="./lib/template.js"></script>
+    <script src="./lib/jquery-1.8.3.min.js"></script>
+    <script type="text/html" id="tabsTpl">
+        {{each result}}
+        <li data-id="{{$value.titleId}}"><a href="javascript:;">{{$value.title}}</a></li>
+        {{/each}}
+
+    </script>
+    <script type="text/html" id="listTpl">
+        {{each result}}
+        <li class="bcj-item">
+            <a class="gobuy" href="http://s.click.taobao.com/lkqGHQx" target="_blank"></a>
+            {{#$value.productImg}}
+            <div class="describe">
+                <div class="des-title">{{#$value.productName}}</div>
+                <div class="price">
+                    <span>{{#$value.productPrice}}</span>
+
+                </div>
+                <div class="yiling">
+
+                    {{#$value.productCouponRemain}}
+                </div>
+                <div class="youhuiquan">
+                    <div class="pull-left">{{#$value.productCoupon}}</div>
+                    <div class="pull-right">{{#$value.productHref}}</div>
+                </div>
+            </div>
+        </li>
+        {{/each}}
+
+    </script>
+
+    <script src="./js/baicaijia.js"></script>
+</body>
+
+</html>

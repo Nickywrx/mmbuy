@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>商品详情</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/productInfo.css">
+</head>
+
+<body>
+    <!--头部栏-->
+    <div class="m-header">
+        <!--慢慢买的头部，用来装内容-->
+        <div class="m-header-in">
+            <a href="index.html" class="icon-back"> < </a>
+            <h1>国内折扣</h1>
+            <a href="#" class="download"></a>
+        </div>
+    </div>
+
+    <!--产品详情-->
+    <div class="container">
+        <div class="detail"></div>
+    <!--<div class="cu-content-pl ui-border-t">
+      <div class="tit">发表评论</div>
+      <div class="reply">
+        <div class="form">
+        <textarea name="ctl00$ContentBody$txt_nr" id="ctl00_ContentBody_txt_nr" rows="3"></textarea>
+                            <input name="ctl00$ContentBody$lbl_fbr" id="ctl00_ContentBody_lbl_fbr" value="手机端网友14***154" type="hidden">
+                            <input name="ctl00$ContentBody$hid_name" id="ctl00_ContentBody_hid_name" value="移动端凑单品：海天 鲜味 生抽 1.28L" type="hidden">
+                            <div class="ctrl">
+                              <input name="ctl00$ContentBody$Button1" value="发表评论" id="ctl00_ContentBody_Button1" class="tjdp" type="submit">
+          </div>
+        </div>
+      </div>
+      <div class="tit" id="newcomment">最新评论</div>
+      <div class="list">
+        <ul>
+         <li class="ui-border-b"><div class="userimg"><img src="http://home.manmanbuy.com/upface/face/1466230634_162.jpg"></div><div class="con"><div class="name clearfix"><div class="username">赶鸭子上架</div> <div class="time">2016/10/25 14:18:45</div></div><div class="content">比超市便宜了几块</div></div></li>
+        </ul>
+      </div>
+    </div>-->
+
+        <!--固定导航-->
+        <div class="fixnav">
+            <a href="#"></a>
+            <div class="title1">评价</div>
+            <a href="#"></a>
+            <div class="title2">前往购买</div>
+        </div>
+    </div>
+
+    <!--底部栏-->
+    <div class="m-footer">
+        <div class="m-footer-in">
+            <div class="m-footer-top clearfix">
+                <a href="javascript:;">登陆</a>
+                <a href="javascript:;">注册</a>
+                <a href="javascript:;"><img src="images/returnTop.png" alt="回到顶部"/>返回顶部</a>
+            </div>
+            <div class="m-footer-bottom">
+                <p><strong>手机APP下载</strong> 慢慢买手机版 -- 掌上比价平台</p>
+                <p>m.manmanbuy.com</p>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/html" id="productInfo">
+        {{ each result as value }}
+        <div class="up-info">
+            <h3>{{value.productName}}</h3>
+            <h4>{{value.productPinkage}}</h4>
+            <span>{{value.productFrom}}</span>
+            <span>{{value.productTime}}</span>
+            <span>{{value.productTips}}</span>
+            <span>{{value.productComCount}}</span>
+            <div class="pic-info">
+                {{#value.productImgSm}}
+            </div>
+            <div class="product-info">
+                <p>{{value.productInfo2}}</p>
+                <div class="big-pic">
+                    {{#value.productImg2}}
+                </div>
+                <div class="buyme">
+                    <a href="#">前往购买</a>
+                </div>
+            </div>
+        </div>
+            {{#value.productComment}}
+        {{ /each }}
+    </script>
+
+    <script src="./lib/jquery-1.8.3.min.js"></script>
+    <script src="./lib/template.js"></script>
+    <script src="./js/productInfo.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>产品列表功能页面</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/public.css"/>
+    <link rel="stylesheet" href="css/productList.css"/>
+</head>
+<body>
+
+
+<!--固定头部-->
+<div class="m-header">
+    <!--慢慢买的头部，用来装内容-->
+    <div class="m-header-in">
+        <!--logo-->
+        <h1 class="logo">Logo</h1>
+
+        <a href="#" class="download"></a>
+    </div>
+
+    <!--搜索框-->
+    <div class="m-content-search">
+        <form action="#">
+            <input type="search" placeholder="前排销售瓜子汽水"/>
+            <button>搜索</button>
+        </form>
+
+    </div>
+</div>
+
+<div class="overlay">
+    <img src="./images/loading9.gif" alt="">
+</div>
+
+
+<div class="productList">
+    <!-- 面包屑导航 -->
+    <div class="crumb">
+        <p>
+            <a href="index.html">首页</a> >
+            <a href="category.html">全部分类</a>>
+            <!--<span>电视</span>-->
+        </p>
+    </div>
+
+    <div class="productList-content">
+    <!--商品列表-->
+    <!--<div class="shop-info clearfix">
+        <a href="#">
+            <div class="pic">
+            <img src="images/ic_cu.png" alt=""/>
+            </div>
+
+        <div class="describe">
+            <p class="title">TCL D43A810 42英寸 高清720P 智能网络LED液晶电视</p>
+            <div class="option">
+                <div class="price"> <em>¥</em>1998</div>
+
+                <div class="time clearfix">
+                    <span class="mall">7商城报价</span>
+                                <span class="commet">
+                                    <i class="icon-comment"></i>
+                                    199
+                                </span>
+                </div>
+
+            </div>
+        </div>
+        </a>
+    </div>-->
+    </div>
+</div>
+
+
+<!--固定底部-->
+<div class="m-footer">
+
+    <div class="changePage row">
+        <a  href="javascript:;" class="prev col-xs-4 btn btn-default" data-id="">上一页</a>
+
+        <p class="pageCount col-xs-4"><!--<span class="now"></span>/<span class="total" ></span>--></p>
+       <!-- <select name="" id="selectPage" class="col-xs-4">
+
+        </select>-->
+        <a href="javascript:;" class="next col-xs-4 btn btn-default" data-id="">下一页</a>
+    </div>
+
+    <div class="m-footer-in">
+        <div class="m-footer-top clearfix">
+            <a href="javascript:;">登陆</a>
+            <a href="javascript:;">注册</a>
+            <a href="javascript:;"><img src="images/returnTop.png" alt="回到顶部"/>返回顶部</a>
+
+        </div>
+        <div class="m-footer-bottom">
+            <p><strong>手机APP下载</strong> 慢慢买手机版 -- 掌上比价平台</p>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </div>
+</div>
+</body>
+<script src="lib/jquery.min.js"></script>
+<script src="lib/jquery.cookie.js"></script>
+<script src="lib/bootstrap.min.js"></script>
+<script src="lib/template.js"></script>
+<script src="js/productList.js"></script>
+
+<script type="text/html" id="listTmp">
+    {{ each result as value i }}
+
+    <div class="shop-info clearfix">
+        <a href="productDetail.html?{{ value.productId }}" >
+            <div class="pic">
+                {{ #value.productImg }}
+            </div>
+
+            <div class="describe">
+                <p class="title">{{ value.productName }}</p>
+                <div class="option">
+                    <div class="price"> {{ value.productPrice }}</div>
+
+                    <div class="time clearfix">
+                        <span class="mall">{{ value.productQuote }}</span>
+                                <span class="commet">
+                                    <i class="icon-comment"></i>
+                                    {{ value.productCom }}
+                                </span>
+                    </div>
+
+                </div>
+            </div>
+        </a>
+    </div>
+
+    {{ /each }}
+</script>
+<!--面包屑-->
+<script type="text/html" id="crumbTmp">
+
+        <span>{{ result[0].category }}</span>
+
+</script>
+
+<!--页面切换码-->
+<script type="text/html" id="countTmp">
+
+    <span class="now">{{ now }}</span> / <span class="total" >{{ size }}</span>
+
+</script>
+
+
+<!--<script type='text/html' id="page_number">
+    <option value="{{ num }}">{{ page }}</option>
+</script>-->
+</html>

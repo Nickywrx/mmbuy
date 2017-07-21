@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>比价搜索</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/public.css"/>
+    <link rel="stylesheet" href="css/category.css"/>
+
+</head>
+<body>
+
+<div class="m-header">
+    <!--慢慢买的头部，用来装内容-->
+    <div class="m-header-in">
+        <!--logo-->
+        <a href="index.html">
+        <h1 class="logo">Logo</h1>
+        </a>
+        <a href="#" class="download"></a>
+    </div>
+
+
+    <!--搜索框-->
+    <div class="m-content-search">
+        <form action="#">
+            <input type="search" placeholder="前排销售瓜子汽水"/>
+            <button>搜索</button>
+        </form>
+
+    </div>
+</div>
+
+<div class="overlay">
+    <img src="./images/loading12.gif" alt="">
+</div>
+
+<div class="brief">
+    <div class="briefin">
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+            <!--挖坑-->
+
+        </div>
+
+    </div>
+</div>
+
+<div class="m-footer">
+    <div class="m-footer-in">
+        <div class="m-footer-top clearfix">
+            <a href="javascript:;">登陆</a>
+            <a href="javascript:;">注册</a>
+            <a href="javascript:;"><img src="images/returnTop.png" alt="回到顶部"/>返回顶部</a>
+
+        </div>
+        <div class="m-footer-bottom">
+            <p><strong>手机APP下载</strong> 慢慢买手机版 -- 掌上比价平台</p>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </div>
+</div>
+</body>
+<script src="lib/jquery.min.js"></script>
+<script src="lib/jquery.cookie.js"></script>
+<script src="lib/bootstrap.min.js"></script>
+<script src="lib/template.js"></script>
+<script src="js/category.js"></script>
+
+
+<script type="text/html" id="titleTmp">
+    {{ each result as value i }}
+    <div class="panel panel-warning">
+        <div class="panel-heading" role="tab" id="headingOne">
+            <h4 class="panel-title">
+                <a  role="button" data-toggle="collapse" data-parent="#accordion" index="{{ value.titleId }}" href="#collapseOne{{ i }}" aria-expanded="true" aria-controls="collapseOne">
+                    {{ value.title }}
+                </a>
+            </h4>
+        </div>
+        <div id="collapseOne{{ i }}" class="panel-collapse collapse out" role="tabpanel" aria-labelledby="headingOne">
+            <div class="panel-body">
+
+            </div>
+        </div>
+    </div>
+    {{ /each }}
+</script>
+
+
+<script type="text/html" id="bodyTmp">
+
+
+        {{ each result as value }}
+            <div class="list col-xs-4">
+        <a data-cate="{{ value.category }}" class="category btn btn-warning" href="productList.html?{{ value.categoryId }}&pageid=1">{{ value.category }}</a>
+            </div>
+        {{ /each }}
+
+
+</script>
+
+</html>

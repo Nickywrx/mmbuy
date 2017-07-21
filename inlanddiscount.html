@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>省钱快曝 -- 慢慢买</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/inlanddiscount.css">
+</head>
+<body>
+    <!--头部栏-->
+    <div class="m-header">
+    <!--慢慢买的头部，用来装内容-->
+    <div class="m-header-in">
+        <a href="index.html" class="icon-back"><</a>        
+        <h1>国内折扣</h1>        
+        <a href="#" class="download"></a>
+    </div>
+    </div>
+
+    <!--国内折扣首页-->
+    <div class="idm-list">
+        <ul>
+            
+        </ul>
+    </div>
+    
+
+    <!--底部栏-->
+    <div class="m-footer">
+    <div class="m-footer-in">
+        <div class="m-footer-top clearfix">
+            <a href="javascript:;">登陆</a>
+            <a href="javascript:;">注册</a>
+            <a href="javascript:;"><img src="images/returnTop.png" alt="回到顶部"/>返回顶部</a>
+        </div>
+        <div class="m-footer-bottom">
+            <p><strong>手机APP下载</strong> 慢慢买手机版 -- 掌上比价平台</p>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </div>
+</div>
+<!--模板-->
+    <script type="text/html" id="inlandDiscount">
+    {{ each result as value }}
+        <li class="list-left">
+                <a href="productInfo.html?productid={{value.productId}}">
+                    <div class="pic">
+                        {{#value.productImg}}
+                    </div>
+                    <div class="pr-info">
+                        <div class="pr-title"><p>{{value.productName}}<span>{{value.productPinkage}}</span></p></div>
+                        <div class="pr-price"><p>{{value.productPrice}}</p></div>
+                        <div class="pr-source"><span>{{value.productFrom}} | {{value.productTime}}</span></div>
+                    </div>
+                </a>
+            </li>
+    {{ /each }}
+    </script>
+    <script src="./lib/jquery-1.8.3.min.js"></script>    
+    <script src="./lib/template.js"></script>
+    <script src="./js/inlanddiscount.js"></script>
+</body>
+</html>

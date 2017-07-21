@@ -1,0 +1,117 @@
+.overlay {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 999;
+  background-color: #fff; // display: none;
+  img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 200px;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.m-content{
+  padding: 90px  0;
+  max-width: 640px;
+  min-width: 320px;
+  margin: 0 auto;
+  //background-color: #F1F1F1;
+  /*导航*/
+  .m-nav{
+  ul{
+    li{
+      width: 25%;
+      text-align: center;
+      float: left;
+      margin-top: 20px;
+      a{
+        display: block;
+        img{
+          width: 44px;
+        }
+      }
+    }
+    li:nth-last-child(-n+4){
+      display: none;
+    }
+  }
+  }
+
+  /*推荐*/
+  .recommend{
+    margin-top: 24px;
+    /*推荐头*/
+    .recommend-head{
+      height: 32px;
+      padding: 6px;
+      background: url("../images/recommend_bg.png") repeat-x;
+      h3{
+        float: left;
+        font-size: 14px;
+        color: #fff;
+      }
+      span{
+        float: right;
+        width: 18px;
+        height: 18px;
+        background: url("../images/more.png") no-repeat;
+        background-size: 18px 18px;
+      }
+    }
+
+    /*推荐内容*/
+    .recommend-content{
+        .shop-info{
+          height: 115px;
+          border-bottom: 1px dashed #EBEBEB;
+            .pic{
+              float: left;
+              padding-top: 10px;
+              width: 100px;
+              height: 115px;
+              img{
+                width: 100%;
+              }
+            }
+          .describe{
+            overflow: hidden;
+            height: 100%;
+            padding: 15px 8px 0 8px;
+              .title{
+                height: 36px;
+                overflow: hidden;
+                span{
+                  color: #FF8F3E;
+                }
+              }
+            .option{
+              margin-top: 25px;
+                .time{
+                  font-size: 12px;
+                    color: #A1A1A1;
+                    .small{
+                      float: left;
+                    }
+                  .commet{
+                    i{
+                      display: inline-block;
+                      width: 14px;
+                      height: 11px;
+                      background: url("../images/comment.png") no-repeat;
+                      background-size: 12px 12px;
+                    }
+                    float: right;
+                  }
+                }
+            }
+          }
+        }
+    }
+
+  }
+}

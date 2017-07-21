@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>最新优惠 - 省钱控 - 慢慢买</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/moneyctrl.css">
+</head>
+
+<body>
+    <div class="overlay">
+        <img src="./images/loading9.gif" alt="" >
+    </div>
+   
+    <!--头部栏-->
+    <div class="m-header">
+        <!--慢慢买的头部，用来装内容-->
+        <div class="m-header-in">
+            <a href="index.html" class="icon-back">
+                <</a>
+                    <h1>省钱控 — 最新优惠</h1>
+                    <a href="#" class="download"></a>
+        </div>
+    </div>
+
+    <!--省钱列表-->
+    <div class="mc-list">
+        
+    </div>
+
+    <!--省钱列表页码-->
+    <div class="page-parts">
+        <div class="mc-page">
+            <div class="box1">
+                <a href="#">上一页</a>
+            </div>
+            <div class="box2">
+                <select name="select" id="selectPage">
+                
+                </select>
+            </div>
+            <div class="box3">
+                <a href="#">下一页</a>
+            </div>
+        </div>
+    </div>
+    <!--面包屑-->
+    <div class="mainnav">
+        <div class="nav-info">
+            <p>
+                <a href="index.html">首页</a>
+            </p>
+            <span>>省钱控</span>
+        </div>
+    </div>
+    <div class="empty">
+
+    </div>
+
+    <!--底部栏-->
+    <div class="m-footer">
+        <div class="m-footer-in">
+            <div class="m-footer-top clearfix">
+                <a href="javascript:;">登陆</a>
+                <a href="javascript:;">注册</a>
+                <a href="javascript:;"><img src="images/returnTop.png" alt="回到顶部" />返回顶部</a>
+            </div>
+            <div class="m-footer-bottom">
+                <p><strong>手机APP下载</strong> 慢慢买手机版 -- 掌上比价平台</p>
+                <p>m.manmanbuy.com</p>
+            </div>
+        </div>
+    </div>
+
+    <!--模板-->
+    <script type="text/html" id="moneyCtrl">
+        {{ each result as value }}
+        <div class="shop-info clearfix">
+            <a href="productInfo.html?productid={{value.productId}}" >
+                <div class="pic">
+            {{#value.productImgSm}}
+            </div>
+        
+            <div class="describe">
+                <p class="title">{{value.productName}} <span>{{value.productPinkage}}</span></p>
+                <div class="option">
+                    <div class="time clearfix">
+                        <span class="mall">{{value.productFrom}} | {{value.productTime}}</span>
+                        <span class="commet">
+                        <i class="icon-comment"></i>
+                        {{value.productComCount}}
+                    </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+         </a>
+        {{ /each }}
+    </script>
+
+    <script type='text/html' id="page_number">
+        <option value="{{ num }}">{{ page }}</option>
+    </script>
+
+    <script src="./lib/jquery-1.8.3.min.js"></script>
+    <script src="./lib/template.js"></script>
+    <script src="./js/moneyctrl.js"></script>
+</body>
+
+</html>

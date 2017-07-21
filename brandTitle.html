@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <title>慢慢买 - 手机版</title>
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/public.css" />
+    <link rel="stylesheet" href="css/brandTitle.css">
+</head>
+
+<body>
+    <!-- 头部导航栏 -->
+    <div class="m-header">
+        <!--慢慢买的头部，用来装内容-->
+        <div class="m-header-in">
+            <!--logo-->
+            <h1 class="logo">Logo</h1>
+            <a href="#" class="download"></a>
+        </div>
+
+        <!--搜索框-->
+        <div class="m-content-search">
+            <form action="#">
+                <input type="search" placeholder="前排销售瓜子汽水" />
+                <button>搜索</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- 主体内容 -->
+    <div class="container">
+
+        <!-- 品牌大全模板的坑 -->
+
+        <div class="topTen">
+            <!-- 十大品牌模板的坑 -->
+        </div>
+
+        <div class="sellRank">
+            <!-- 销售排行模板的坑 -->
+        </div>
+
+        <div class="comment">
+            <!-- 最新评论模板的坑 -->
+        </div>
+    </div>
+
+    <!-- 底部 -->
+    <div class="m-footer">
+        <div class="m-footer-in">
+            <div class="m-footer-top clearfix">
+                <a href="javascript:;">登陆</a>
+                <a href="javascript:;">注册</a>
+                <a href="javascript:;"><img src="images/returnTop.png" alt="回到顶部"/>返回顶部</a>
+            </div>
+            <div class="m-footer-bottom">
+                <p><strong>手机APP下载</strong> 慢慢买手机版 -- 掌上比价平台</p>
+                <p>m.manmanbuy.com</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 品牌大全模板 -->
+    <script type="text/html" id="brandTitleTpl">
+        <!-- 面包屑导航 -->
+        <div class="crumb">
+            <p>
+                <a href="/index.html">首页</a> >
+                <a href="/brandTitle.html">品牌大全</a>
+            </p>
+        </div>
+        <h4 class="brandTitle_hot">热门品牌排行</h4>
+        <ul class="brandTitleItems">
+            {{ each result as value index }}
+            <li>
+                <a href="/brandTitle.html?id={{ value.brandTitleId }}"> {{ value.brandTitle }} </a>
+            </li>
+            {{ /each }}
+        </ul>
+    </script>
+
+    <!-- 十大品牌模板 -->
+    <script type="text/html" id="topTenTpl">
+        <!-- 面包屑导航 -->
+        <div class="crumb">
+            <p>
+                <a href="/index.html">首页</a> >
+                <a href="/brandTitle.html">品牌大全</a>>
+                <span></span>
+            </p>
+        </div>
+        <h4 class="brand_title"></h4>
+        <ul class="brandItems">
+            {{ each result as value index }}
+            <li>
+                <a href="javascript:;">
+                    <em>{{ getIndex(value.brandId, value.brandTitleId) }}</em>
+                    <span>{{ value.brandName }}</span>
+                    <p>{{ value.brandInfo }}</p>
+                </a>
+            </li>
+            {{ /each }}
+        </ul>
+    </script>
+
+    <!-- 销售排行模板 -->
+    <script type="text/html" id="sellRankTpl">
+        <h4 class="brand_title"></h4>
+        {{ each result as value index }}
+        <ul>
+            <li class="clearfix">
+                <a href="javascript:;">
+                    <div class="sellImg">
+                        {{ #value.productImg }}
+                    </div>
+                    <p class="disc">{{ value.productName }}</p>
+                    <p class="price"><span>{{ value.productPrice }}</span><em>★★★★★</em></p>
+                    <p class="sell_comment">
+                        <span>{{ value.productQuote }}</span>
+                        <span>全网{{ value.productCom }}</span>
+                    </p>
+                </a>
+            </li>
+        </ul>
+        {{ /each }}
+    </script>
+
+    <!-- 最新评论模板 -->
+    <script type="text/html" id="commentTpl">
+        <h4 class="brand_title"></h4>
+        {{ each result as value index }}
+        <div class="clearfix">
+            <p class="comment_title">
+                <span>{{ value.comName }}</span>
+                <em>{{ value.comTime }}</em>
+            </p>
+            <p class="comment_content">{{ value.comContent }}</p>
+            <strong class="comment_from">{{ value.comFrom }}</strong>
+        </div>
+        {{ /each }}
+    </script>
+
+    <script src="./lib/jquery-1.8.3.min.js"></script>
+    <script src="./lib/template.js"></script>
+    <script src="./js/brandTitle.js"></script>
+</body>
+
+</html>

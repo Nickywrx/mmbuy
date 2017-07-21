@@ -1,0 +1,121 @@
+/*国内折扣样式*/
+/*公共样式头部*/
+.m-header {
+  width: 100%;
+  height: 45px;
+}
+.m-header .m-header-in {
+  max-width: 640px;
+  min-width: 320px;
+  height: 45px;
+  background-color: #FF841D;
+  margin: 0 auto;
+  padding: 10px 10px 0 15px;
+  position: relative;
+}
+.m-header .m-header-in .icon-back {
+  width: 50px;
+  height: 45px;
+  font-family: Simsun;
+  font-size: 25px;
+  font-weight: bold;
+  color: #fff;
+  position: absolute;
+  left: 13px;
+  top: 10px;
+}
+.m-header .m-header-in h1 {
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
+}
+.m-header .m-header-in .download {
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  background: url("../images/header_app.png") no-repeat;
+  background-size: 30px 30px;
+  position: absolute;
+  right: 18px;
+  top: 6px;
+}
+/*国内折扣列表*/
+.idm-list {
+  margin: 0 auto;
+  max-width: 640px;
+  min-width: 320px;
+  overflow: hidden;
+}
+.idm-list ul li {
+  padding-top: 20px;
+  float: left;
+  width: 50%;
+  height: 265px;
+  border-right: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+.idm-list ul li .pic {
+  margin: 10px auto;
+  width: 140px;
+  height: 140px;
+}
+.idm-list ul li .pic img {
+  width: 140px;
+  height: 140px;
+}
+.idm-list ul li .pr-info {
+  width: 100%;
+}
+.idm-list ul li .pr-info .pr-title {
+  height: 36px;
+  overflow: hidden;
+  font-weight: bold;
+}
+.idm-list ul li .pr-info .pr-price {
+  color: #FF841D;
+}
+.idm-list ul li .pr-info .pr-source {
+  font-size: 12px;
+  color: #A1A1A1;
+}
+/*公共样式底部*/
+.m-footer {
+  width: 100%;
+  height: 85px;
+  bottom: 0;
+  left: 0;
+}
+.m-footer .m-footer-in {
+  width: 100%;
+  max-width: 640px;
+  min-width: 320px;
+  height: 85px;
+  margin: 0 auto;
+  background-color: #EFEFEF;
+}
+.m-footer .m-footer-in .m-footer-top a {
+  float: left;
+  height: 30px;
+  line-height: 26px;
+  border: 2px solid #ddd;
+  border-right: none;
+  text-align: center;
+  width: 33.33%;
+}
+.m-footer .m-footer-in .m-footer-top a:nth-child(1) {
+  border-left: none;
+}
+.m-footer .m-footer-in .m-footer-top a:nth-child(3) {
+  position: relative;
+}
+.m-footer .m-footer-in .m-footer-top a:nth-child(3) img {
+  width: 11px;
+}
+.m-footer .m-footer-in .m-footer-bottom {
+  text-align: center;
+  padding-top: 12px;
+  font-size: 12px;
+}
+.m-footer .m-footer-in .m-footer-bottom p:nth-child(1) strong {
+  color: #FD2626;
+}

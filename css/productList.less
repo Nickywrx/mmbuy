@@ -1,0 +1,108 @@
+.logo{
+  padding: 0;
+  margin: 0;
+}
+.overlay {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 999;
+  background-color: #fff; // display: none;
+  img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 200px;
+    transform: translate(-50%, -50%);
+  }
+}
+.productList{
+  max-width: 640px;
+  min-width: 320px;
+  margin: 90px auto;
+  .crumb {
+    margin: 0 auto;
+    margin-top: 82px;
+    height: 36px;
+    line-height: 36px;
+    padding-left: 6px;
+    border-top: 1px solid #ebebeb;
+    background: linear-gradient(#fff, #ebebeb);
+  }
+
+  /*商品信息*/
+  .shop-info{
+    height: 115px;
+    border-bottom: 1px dashed #EBEBEB;
+    .pic{
+      float: left;
+      padding-top: 10px;
+      width: 100px;
+      height: 115px;
+      img{
+        width: 100%;
+      }
+    }
+    .describe{
+      overflow: hidden;
+      height: 100%;
+      padding: 15px 8px 0 8px;
+      .title{
+        height: 36px;
+        overflow: hidden;
+
+      }
+      .option{
+        margin-top: 25px;
+        .price{
+          margin-top: -10px;
+          margin-bottom: 5px;
+          color: red;
+          font-size: 16px;
+            em{
+              font-size: 12px;
+              font-style: normal;
+            }
+        }
+        .time{
+          font-size: 12px;
+          color: #A1A1A1;
+          .small{
+            float: left;
+          }
+          .commet{
+            i{
+              display: inline-block;
+              width: 14px;
+              height: 11px;
+              background: url("../images/comment.png") no-repeat;
+              background-size: 12px 12px;
+            }
+            float: right;
+          }
+        }
+      }
+    }
+  }
+}
+
+div.m-footer{
+  height: auto;
+  .changePage{
+    height: 30px;
+    background-color: #fff;
+    input{
+      text-align: center;
+    }
+    .pageCount{
+      height: 100%;
+      text-align: center;
+      padding-top: 8px;
+    }
+
+  }
+
+}
+

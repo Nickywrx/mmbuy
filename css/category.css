@@ -1,0 +1,43 @@
+.logo {
+  padding: 0;
+  margin: 0;
+}
+.overlay {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 999;
+  background-color: #fff;
+}
+.overlay img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 200px;
+  transform: translate(-50%, -50%);
+}
+.brief {
+  max-width: 640px;
+  min-width: 320px;
+  margin: 90px auto;
+}
+.brief .briefin {
+  border-radius: 5px;
+}
+.brief .briefin .panel {
+  margin: 0;
+  border: none;
+  border-bottom: 1px solid #dddddd;
+}
+.brief .briefin .panel #headingOne h4 a {
+  text-align: center;
+  display: block;
+  width: 100%;
+  font-weight: bold;
+  font-family: "Microsoft Yahei", Arial, sans-serif;
+}
+.brief .briefin .panel .panel-collapse .panel-body .list {
+  margin-top: 10px;
+}

@@ -1,0 +1,107 @@
+/*公共样式头部*/
+.m-header {
+  position: fixed;
+  width: 100%;
+  height: 45px;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  /*公共搜索框*/
+}
+.m-header .m-header-in {
+  max-width: 640px;
+  min-width: 320px;
+  height: 45px;
+  background-color: #FF841D;
+  margin: 0 auto;
+  padding: 10px 10px 0 15px;
+}
+.m-header .m-header-in .logo {
+  display: inline-block;
+  text-indent: -999em;
+  width: 185px;
+  height: 25px;
+  background: url("../images/header_logo.png") no-repeat;
+  background-size: 185px 25px;
+}
+.m-header .m-header-in .download {
+  float: right;
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  background: url("../images/header_app.png") no-repeat;
+  background-size: 30px 30px;
+}
+.m-header .m-content-search {
+  max-width: 640px;
+  min-width: 320px;
+  margin: 0 auto;
+  border-bottom: 1px solid #EBEBEB;
+  height: 45px;
+  padding: 9px;
+  background-color: #fff;
+}
+.m-header .m-content-search form {
+  position: relative;
+}
+.m-header .m-content-search form input {
+  width: 100%;
+  height: 27px;
+  border-radius: 13px;
+  background-color: #F1F1F1;
+  padding-left: 30px;
+}
+.m-header .m-content-search form button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 56px;
+  height: 27px;
+  border: none;
+  border-radius: 13px;
+  background-color: #FF841D;
+  color: #fff;
+}
+/*公共样式底部*/
+.m-footer {
+  position: fixed;
+  width: 100%;
+  height: 85px;
+  bottom: 0;
+  left: 0;
+  z-index: 9999;
+}
+.m-footer .m-footer-in {
+  width: 100%;
+  max-width: 640px;
+  min-width: 320px;
+  height: 85px;
+  margin: 0 auto;
+  background-color: #EFEFEF;
+}
+.m-footer .m-footer-in .m-footer-top a {
+  float: left;
+  height: 30px;
+  line-height: 26px;
+  border: 2px solid #ddd;
+  border-right: none;
+  text-align: center;
+  width: 33.33%;
+}
+.m-footer .m-footer-in .m-footer-top a:nth-child(1) {
+  border-left: none;
+}
+.m-footer .m-footer-in .m-footer-top a:nth-child(3) {
+  position: relative;
+}
+.m-footer .m-footer-in .m-footer-top a:nth-child(3) img {
+  width: 11px;
+}
+.m-footer .m-footer-in .m-footer-bottom {
+  text-align: center;
+  padding-top: 12px;
+  font-size: 12px;
+}
+.m-footer .m-footer-in .m-footer-bottom p:nth-child(1) strong {
+  color: #FD2626;
+}

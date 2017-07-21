@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>产品分类 - 慢慢买比价网</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/public.css">
+    <link rel="stylesheet" href="./css/sitenav.css">
+</head>
+
+<body>
+    <div class="m-header">
+        <!--慢慢买的头部，用来装内容-->
+        <div class="m-header-in">
+            <a href="/index.html" class="backArrow"><</a>
+            <h1>商城导航</h1>
+            <a href="#" class="download"></a>
+        </div>
+    </div>
+
+    <!-- 主体 -->
+    <div class="container">
+        <div class="sitenav clearfix">
+            <!-- 产品分类模板的坑 -->
+        </div>
+    </div>
+
+    <!-- 面包屑 -->
+    <div class="crumb">
+        <p>
+            <a href="/index.html">首页</a> > 
+            <a href="/sitenav.html">商城导航</a>
+        </p>
+    </div>
+
+    <!-- 底部 -->
+    <div class="m-footer">
+        <div class="m-footer-in">
+            <div class="m-footer-top clearfix">
+                <a href="javascript:;">登陆</a>
+                <a href="javascript:;">注册</a>
+                <a href="javascript:;"><img src="images/returnTop.png" alt="回到顶部"/>返回顶部</a>
+            </div>
+            <div class="m-footer-bottom">
+                <p><strong>手机APP下载</strong> 慢慢买手机版 -- 掌上比价平台</p>
+                <p>m.manmanbuy.com</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 产品分类模板 -->
+    <script type="text/html" id="sitenavTpl">
+        {{ each result as value index }}
+        <a href="{{ value.navHref }}" class="item">
+            <img src="{{ value.navImg }}" alt="">
+            <span>{{ value.navTitle }}</span>
+        </a> {{ /each }}
+    </script>
+
+    <script src="./lib/jquery-1.8.3.min.js"></script>
+    <script src="./lib/template.js"></script>
+    <script src="./js/sitenav.js"></script>
+
+</body>
+
+</html>

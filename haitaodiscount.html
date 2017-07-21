@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>海淘折扣 -- 慢慢买</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/haitaodiscount.css">
+</head>
+<body>
+    <!--头部栏-->    
+    <div class="m-header">
+    <!--慢慢买的头部，用来装内容-->
+    <div class="m-header-in">
+        <a href="index.html" class="icon-back"><</a>        
+        <h1>海淘折扣</h1>        
+        <a href="#" class="download"></a>
+    </div>
+    </div>
+
+    <!--省钱列表-->
+        <div class="htd-list">
+
+         </div>
+    
+    <!--省钱列表页码-->
+        <div class="page-parts">
+            <div class="htd-page">
+            <div class="box1">
+                <a href="#">上一页</a>
+            </div>
+            <div class="box2">
+                <select name="select" id="selectPage">
+                <option value="">1</option>
+            </select>
+            </div>
+            <div class="box3">
+                <a href="#">下一页</a>
+            </div>
+        </div>
+        </div>
+    <!--面包屑-->
+        <div class="mainnav">
+            <div class="nav-info">
+                <p>
+                    <a href="index.html">首页</a>
+                </p>
+                <span>> 海淘折扣</span>
+            </div>
+        </div>
+    <div class="empty">
+        
+    </div>
+
+    <!--底部栏-->
+    <div class="m-footer">
+    <div class="m-footer-in">
+        <div class="m-footer-top clearfix">
+            <a href="javascript:;">登陆</a>
+            <a href="javascript:;">注册</a>
+            <a href="javascript:;"><img src="images/returnTop.png" alt="回到顶部"/>返回顶部</a>
+        </div>
+        <div class="m-footer-bottom">
+            <p><strong>手机APP下载</strong> 慢慢买手机版 -- 掌上比价平台</p>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </div>
+</div>
+
+    <!--模板-->
+    <script type="text/html" id="haitaoDiscount">
+    {{ each result as value }}
+        <div class="shop-info clearfix">
+        <a href="moneyproduct.html?productid={{value.productId}}" class="pic">
+            {{#value.productImgSm}}
+         </a>            
+        <div class="describe">
+            <p class="title">{{value.productName}} <span>{{value.productPinkage}}</span></p>
+            <div class="option">
+                <div class="time clearfix">
+                    <span class="mall">{{value.productFrom}} | {{value.productTime}}</span>
+                    <span class="commet">
+                        <i class="icon-comment"></i>
+                        {{value.productComCount}}
+                    </span>
+                </div>
+            </div>
+         </div>
+        </div>
+    {{ /each }}
+    </script>
+
+    <script type="text/html" id="pageTpl">
+        
+    </script>
+
+    <script src="./lib/jquery-1.8.3.min.js"></script>    
+    <script src="./lib/template.js"></script>
+    <script src="./js/haitaodiscount.js"></script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+// .head {
+//     background: #f4483e;
+//     color: #FFFFFF;
+//     height: 44px;
+//     width: 100%;
+//     display: -webkit-box !important;
+//     display: box !important;
+//     position: relative;
+// }
+// 头部
+
+.overlay {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 999;
+    background-color: #fff; // display: none;
+    img {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 200px;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.head {
+    background: #f4483e;
+    color: #FFFFFF;
+    height: 44px;
+    width: 100%;
+    display: -webkit-box !important;
+    display: box !important;
+    position: relative;
+    h1{
+        position: absolute;
+        left: 38% ;
+        font-size: 20px;
+        line-height: 44px;
+        display:inline-block;
+    
+    }
+    a.back{
+       
+        font-size: 40px;
+        color:#fff;
+        //font-weight: 900;
+        line-height: 40px;
+        padding-left: 5px;
+         display:inline-block;
+    }
+    .home a{
+         width: 30px;
+        height: 30px;
+          background-image: url(../images/header_app.png);
+        // width: 100%;
+        position: absolute;
+        // display: block;
+        right: 5px;
+         background-size: 32px;
+         text-align: center;
+         margin-top:7px;
+        // line-height: 44px;
+    }
+}
+// 头部结束
+
+.coupon-list {
+    background: #FFFFFF;
+}
+
+.coupon-list ul,
+.coupon-list li {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+.coupon-list ul li {
+    border-bottom: 1px solid #e7e7e7;
+    //background-image: url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024'><path fill='#999999' d='M746.255255 299.653099 746.33098 299.728824 713.12674 332.933063 713.049992 332.857339 297.859875 748.048479 264.635169 714.82275 679.816077 299.642866 264.635169-115.538041 297.859875-148.762747 713.00906 266.386438 713.085808 266.30969 746.341213 299.567141Z' transform='translate(0, 812) scale(1, -1)'/></svg>");
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    background-position: right center;
+    list-style: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.coupon-list ul li:after {
+    clear: both;
+    content: "";
+    display: block;
+    font-size: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+.coupon-list ul li a {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    box-sizing: content-box;
+}
+
+.coupon-list .pic {
+    width: 100px;
+    height: 80px;
+    overflow: hidden;
+    margin-right: 10px;
+    float: left;
+}
+
+.coupon-list .pic img {
+    max-width: 100px;
+    height: auto;
+}
+
+.coupon-list .info {
+    padding-right: 30px;
+    overflow: hidden;
+}
+
+.coupon-list .info .tit {}
+
+.coupon-list .info .tit h3 {
+    margin: 0px;
+    padding: 0px;
+    word-break: break-all;
+    text-align: justify;
+    font-size: 14px;
+    font-weight: normal;
+    color: #333333;
+    line-height: 20px;
+}
+
+.coupon-list .info .time {
+    font-size: 12px;
+    color: #EE7700;
+    margin-top: 10px;
+}

@@ -1,0 +1,252 @@
+body,
+html {
+    background-color: #f7f7f7;
+}
+
+.overlay {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 999;
+    background-color: #fff; // display: none;
+      margin-top: 80px;
+
+    img {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 200px;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.m-header {
+    .m-header-in {
+        position: relative;
+        background-color: #E4393C;
+        .back {
+            width: 45px;
+            height: 45px;
+            text-align:center;
+            position: absolute;
+            left: 0;
+            top: 0;
+            line-height: 45px;
+            .backIcon{
+                text-align:center;
+                height: 45px;
+                font-size: 30px;
+                color: #fff;
+                font-family: '宋体'
+                
+            }
+        }
+       
+        .bigTitle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            color: #fff;
+        }
+       
+    }
+}
+
+.bcj-main {
+    padding-top: 45px;
+    max-width: 640px;
+    min-width: 320px;
+    margin: 0 auto;
+    padding-bottom: 85px;
+    .bcj-nav {
+        position: relative;
+        background-color: #fff;
+        margin-bottom: 7px; // 左侧可滑动标题导航部分
+        .bcj-title {
+            width: 100%;
+            height: 40px;
+            line-height: 38px;
+            .ul-wapper {
+                overflow: hidden;
+                height: 40px;
+                .tabs {
+                   
+                    li {
+                        float: left;
+                        &.active {
+                            a {
+                                color: #E4393C;
+                                border-bottom: 2px solid #E4393C;
+                            }
+                        }
+                        a {
+                            color: #333333;
+                            display: inline-block;
+                            margin: 0 12px;
+                        }
+                    }
+                }
+            }
+        } //右边搜索小按钮
+        .searchBtn {
+            width: 40px;
+            height: 40px;
+            border-left: 1px solid #e6e6e6;
+            position: absolute;
+            right: 0;
+            top: 0;
+            background-color: #fbfbfb;
+            .searchIcon {
+                width: 38px;
+                height: 38px;
+                background-image: url(../images/searchBtn.png); 
+                background-position: center center;
+                background-repeat: no-repeat;
+            }
+        }
+    }
+    .bcj-list {
+        background-color: #fff;
+        margin-bottom: 6px;
+        .bcj-item {
+            height: 150px;
+            padding: 10px 5px;
+            position: relative;
+            a.gobuy {
+                display: block;
+                width: 100%;
+                height: 150px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 1;
+            }
+            img {
+                width: 130px;
+                height: 130px;
+                border: 1px solid #000;
+                float: left;
+            }
+            .describe {
+                overflow: hidden;
+                height: 100%;
+                padding: 6px;
+                .des-title {
+                    line-height: 19px;
+                    height: 19px;
+                    overflow: hidden;
+                }
+                .price {
+                    height: 50px;
+                    line-height: 50px;
+                    color: red;
+                    span {
+                        font-size: 24px;
+                        i {
+                            font-size: 16px;
+                            font-style: normal;
+                            margin-right: 4px;
+                        }
+                        em {
+                            font-size: 14px;
+                             font-style: normal;
+                        }
+                        del {
+                            color: #666;
+                            font-size: 14px;
+                            margin-left: 8px;
+                        }
+                    }
+                    // .p-now {
+                    //     font-size: 24px;
+                    //     span {
+                    //         font-size: 14px;
+                    //     }
+                    // }
+                    // .p-before {
+                    //     color: #666;
+                    // }
+                }
+              
+                .yiling {
+                    i {
+                        margin-top: 0px;
+                        padding-top: 0px;
+                        bottom: 0;
+                        font-style: normal;
+                        font-size: 12px;
+                        line-height: 12px;
+                        width: 82px;
+                        height: 14px;
+                        border: 1px solid #fc353a;
+                        box-sizing: border-box;
+                        border-radius: 6px;
+                        color: #fff;
+                        background-color: #ffb7b7;
+                        text-align: center;
+                        overflow: hidden;
+                        display: inline-block;
+                        margin-top: 3px;
+                        position: relative;
+                        margin-top: 2px;
+                        em {
+                            font-style: normal;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            height: 100%;
+                            background-color: #fc353a;
+                        }
+                        span {
+                            color: #fff;
+                            position: relative;
+                            z-index: 3;
+                        }
+                       
+                    }
+                    span {
+                        font-size: 12px;
+                        color: red;
+                        padding-left: 7px;
+                        display: inline-block;
+                        height: 12px;
+                    }
+                    b {
+                        color: #E4393C;
+                        margin-left: 8px;
+                        font-weight: normal;
+                        font-size: 12px;
+                    }
+                }
+                .youhuiquan {
+                    margin-top: 5px;
+                    color: red;
+                    .pull-left {
+                        width: 110px;
+                        height: 25px;
+                        border: 1px dashed red;
+                        font-size: 12px;
+                        padding-top: 3px;
+                        text-align: center;
+                    }
+                    .pull-right {
+                        width: 58px;
+                        height: 28px;
+                        border-radius: 5px;
+                        background-color: #FF5E5D;
+                        
+                        font-size: 12px;
+                        line-height: 28px;
+                        text-align: center;
+                        a {
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

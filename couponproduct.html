@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet/less" href="css/base.less">
+     <link rel="stylesheet/less" href="css/public.less">
+    <link rel="stylesheet/less" href="css/couponproduct.less">
+   
+    <script src="js/less.js"></script>
+
+
+  
+</head>
+
+<body>
+<div class="overlay">
+    <img src="./images/loading9.gif" alt="">
+</div>
+
+    <!--<div id="ctl00_headerApp" class="head">
+        <div class="back">
+            <a href="index.html" class="icon-back"></a>
+        </div>
+        <h1>   			
+					肯德基优惠券
+				</h1>
+        <div class="home">
+            <a href="http://m.manmanbuy.com/?o=download" onclick="trackEvent('header部下载');" class="icon-app"></a>
+        </div>
+    </div>-->
+
+    <div id="ctl00_headerApp" class="head">
+        <div class="back">
+            <a href="coupon.html" class="back">‹</a>
+        </div>
+        <h1> 肯德基优惠券</h1>
+        <div class="home">
+            <a href="http://m.manmanbuy.com/?o=download" > </a>
+        </div>
+    </div>
+
+    <main class="">
+        <div style="font-size:12px; text-align:center; color:#999; margin:8px 0px;">
+            --点餐前出示手机中的优惠券，即可享受优惠--
+        </div>
+        <div class="coupon-list">
+        </div>
+    </main>
+ 
+        
+        <!--底部-->
+    <div class="m-footer">
+        <div class="m-footer-in">
+            <div class="m-footer-top clearfix">
+                <a href="javascript:;">登陆</a>
+                <a href="javascript:;">注册</a>
+                <a href="javascript:;"><img src="images/returnTop.png" width="11px" alt="回到顶部"/>返回顶部</a>
+
+            </div>
+            <div class="m-footer-bottom">
+                <p><strong>手机APP下载</strong> 慢慢买手机版 -- 掌上比价平台</p>
+                <p>m.manmanbuy.com</p>
+            </div>
+        </div>
+    </div>
+<!--底部结束-->
+
+
+
+    <script id="couponList" type="text/html">
+        <ul class="clearfix">
+            {{each result as value i}}
+            <li>
+                <a href="http://d3.5ikfc.com/static/thumbs/1016/kfc-5ikfc-108_pc27.jpg" title="超大烤翅2块+薯条(中)+黄金鸡块5块+劲爆鸡米花(小) 2016年10月凭肯德基优惠券" class='cover' >
+                    <div class="pic">{{#value.couponProductImg}}</div>
+                    <div class="info">
+                        <div class="tit">
+                            <h3>{{value.couponProductName}}</h3>
+                            <h2>{{value.couponProductPrice}}</h2> </div>
+                        <div class="time">{{value.couponProductTime}}</div>
+                    </div>
+                </a>
+            </li>
+            {{/each}}
+        </ul>
+    </script>
+      <script src='js/jquery-1.12.2.min.js'></script>
+    <script>
+        
+    //    $(function(){
+        // console.log($(".cover"))
+        //     $('.cover').eq(0).on('click',function(){
+        //     $(this).remove();
+        //     console.log('324');
+        // });
+    //    })
+    </script>
+    
+    <script src="js/template.js"></script>
+    <script src="js/jquery-1.12.2.min.js"></script>
+    <script>
+    (function($) {
+        $.getUrlParam = function(name) {
+            var reg = new RegExp("(^|&)" +
+                name + "=([^&]*)(&|$)");
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) return unescape(r[2]);
+            return null;
+        }
+    })(jQuery);
+    </script>
+    <script src="js/couponproduct.js"></script>
+</body>
+
+</html>
